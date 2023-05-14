@@ -48,6 +48,7 @@ docker_build_with_restart(
     entrypoint = entrypoint,
     only=[
       './bin',
+      'index.html',
     ],
     live_update = [
         sync('./bin/frontend', '/frontend'),

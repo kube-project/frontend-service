@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"errors"
 	"fmt"
 	"log"
 
@@ -37,7 +36,7 @@ func (dc *DbConnection) close() error {
 			log.Println("failed to close db: ", err)
 		}
 	}
-	return errors.New("trying to close a nil connection")
+	return nil
 }
 
 // loadImage gets an image from the database.
